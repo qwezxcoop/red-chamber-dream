@@ -1,38 +1,77 @@
 .App {
-  text-align: center;
+  position: relative;
+  background: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Let clicks pass through to the canvas */
+  z-index: 10;
+  font-family: 'Noto Serif SC', serif; /* A beautiful serif font for Chinese */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ui-overlay > * {
+  pointer-events: all; /* Re-enable pointer events for UI elements */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-page, .character-selection {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.home-page h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-page button, .character-selection button, .character-story button {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: 'Noto Serif SC', serif;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home-page button:hover, .character-selection button:hover, .character-story button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.character-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.character-story {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+.character-story button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 20;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

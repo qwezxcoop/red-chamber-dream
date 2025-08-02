@@ -1,51 +1,98 @@
-# Getting Started with Create React App
+# 红楼绘卷 | Red Chamber Dream
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个基于React和Three.js的《红楼梦》交互式3D体验项目，通过现代Web技术重新诠释经典文学作品。
 
-## Available Scripts
+## ✨ 项目特色
 
-In the project directory, you can run:
+- 🌟 **沉浸式封面** - 发光粒子效果和动态背景
+- 🌌 **星座角色选择** - 3D星体布局，展现角色关系
+- 📖 **互动故事体验** - 流畅的动画转场和进度指示
+- 🗺️ **命运关系图** - 可视化角色间的复杂关系网络
+- ❄️ **粒子转场效果** - 雪花和碎片等多种转场动画
 
-### `npm start`
+## 🚀 快速开始
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 环境要求
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js 16+ 
+- npm 或 yarn
 
-### `npm test`
+### 安装依赖
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+### 启动开发服务器
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+在浏览器中打开 [http://localhost:3000](http://localhost:3000) 即可体验。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 构建生产版本
 
-### `npm run eject`
+```bash
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ 技术栈
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **前端框架**: React 19
+- **3D渲染**: Three.js + @react-three/fiber
+- **3D工具**: @react-three/drei, @react-three/postprocessing  
+- **动画**: @react-spring/three
+- **构建工具**: Create React App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 项目结构
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/           # 组件目录
+│   ├── CoverScene.js    # 封面场景
+│   ├── CharacterSelectionScene.js  # 角色选择
+│   ├── CharacterStory.js           # 角色故事
+│   ├── FateMapScene.js            # 命运地图
+│   └── ...                       # 其他组件
+├── data.js              # 角色和场景数据
+├── App.js              # 主应用
+└── index.js            # 入口文件
+```
 
-## Learn More
+## 🎨 功能介绍
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 封面场景
+- 动态粒子背景
+- 发光文字效果
+- 鼠标跟随交互
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 角色选择
+- 3D星座布局
+- 角色颜色预览
+- 连接线动画
 
-### Code Splitting
+### 角色故事
+- 自动/手动切换模式
+- 进度指示器
+- 右键菜单交互
+
+### 命运地图
+- 角色关系网络
+- 交互式图例
+- 动态连接线
+
+## 📄 许可证
+
+本项目仅供学习和研究使用。
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+---
+
+*"满纸荒唐言，一把辛酸泪。都云作者痴，谁解其中味？"*
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
